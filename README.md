@@ -1,47 +1,50 @@
+# Webhook Integration
+
+## To Access the Frontend:
+You can access the frontend of the application using this [GitHub repository](https://github.com/Nawaz027/webhook-frontend).
 
 ## Setup
 
-* Create a new virtual environment
+1. **Create a new virtual environment**
 
-```bash
-pip install virtualenv
-```
+    ```bash
+    pip install virtualenv
+    ```
 
-* Create the virtual env
+2. **Create the virtual environment**
 
-```bash
-virtualenv venv
-```
+    ```bash
+    virtualenv venv
+    ```
 
-* Activate the virtual env
+3. **Activate the virtual environment**
 
-```bash
-source venv/bin/activate
-```
+    ```bash
+    source venv/bin/activate
+    ```
 
-* Install requirements
+4. **Install the requirements**
 
-```bash
-pip install -r requirements.txt
-```
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-* Run the flask application (In production, please use Gunicorn)
+5. **Run the Flask application**
 
-```bash
-python run.py
-```
+    In production, please use Gunicorn instead of the Flask development server:
 
-* The endpoint is at:
+    ```bash
+    python run.py
+    ```
 
-```bash
-POST http://127.0.0.1:5000/webhook/receiver
+6. **API Endpoint**
 
+    The endpoint is available at:
 
+    ```bash
+    POST http://127.0.0.1:5000/webhook/receiver
+    ```
 
-## To Access Frontend:
-https://github.com/Nawaz027/webhook-frontend
-```
+## Additional Notes
 
-You need to use this as the base and setup the flask app. Integrate this with MongoDB (commented at `app/extensions.py`)
-
-*******************
+Make sure to use this base setup to configure the Flask application. Integrate it with MongoDB (configuration is commented at `app/extensions.py`).
